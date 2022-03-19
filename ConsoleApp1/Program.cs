@@ -11,6 +11,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            string s = "пустота";
             int[] sim = {1, 4, 6, 7, 8, 9 };
             Console.WriteLine(sim[0]);
         }
