@@ -13,7 +13,7 @@ namespace ConsoleApp1
         {
             int[] sim = {1, 4, 6, 7, 8, 9 };
 
-            Console.WriteLine(sim[^1]);
+            Console.WriteLine(sim[0]);
         }
     }
 }
