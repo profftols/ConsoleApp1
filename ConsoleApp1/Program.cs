@@ -9,9 +9,10 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static void Uni(ref int a)
+        static int Uni(int a)
         {
-            a = 5;
+            int b = 5;
+            return b;
         }
         static void Main(string[] args)
         {
@@ -20,7 +21,7 @@ namespace ConsoleApp1
             Console.WriteLine(sim[0]);
 
             int num = 99;
-            Uni(ref num);
+            Uni(num);
 
             Console.WriteLine($"{num}, /{s}");
         }
