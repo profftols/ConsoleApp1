@@ -22,7 +22,7 @@ namespace ConsoleApp1
             int num = 99;
             Uni(ref num);
 
-            Console.WriteLine($"{num}, {s}");
+            Console.WriteLine($"{num}, /{s}");
         }
     }
 }
