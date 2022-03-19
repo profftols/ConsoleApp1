@@ -12,7 +12,6 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             int[] sim = {1, 4, 6, 7, 8, 9 };
-            Console.WriteLine();
             Console.WriteLine(sim[0]);
         }
     }
