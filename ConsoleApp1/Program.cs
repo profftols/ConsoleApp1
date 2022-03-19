@@ -11,7 +11,7 @@ namespace ConsoleApp1
     {
         static int Uni(int a)
         {
-            int b = 5;
+            int b = a - 5;
             return b;
         }
         static void Main(string[] args)
