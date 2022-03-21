@@ -9,21 +9,31 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static int Uni(int a)
+        static void Uni(int[] a, int i = 0, int k = 0)
         {
-            int b = a - 5;
-            return b;
+
+            Console.Write($"{a[i]} ");
+
+            k += a[i];
+
+            i++;
+
+            if (i == a.Length)
+            {
+                Console.WriteLine($" сумма элементов: {k}");
+                return;
+            }
+
+
+            Uni(a, i, k);
         }
         static void Main(string[] args)
         {
-            string s = "пустота";
-            int[] sim = {1, 4, 6, 7, 8, 9 };
-            Console.WriteLine(sim[0]);
-
-            int num = 99;
-            Uni(num);
-
-            Console.WriteLine($"{num}, {s}");
+            //int i = 0;
+            //int k = 0;
+            int[] sim = { 1, 4, 6, 7, 8, 9 };
+            Console.Write("вывод массива: ");
+            Uni(sim);
         }
     }
 }
