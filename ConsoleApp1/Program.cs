@@ -23,6 +23,9 @@ namespace ConsoleApp1
             Uni(num);
 
             Console.WriteLine($"{num}, {s}");
+
+
+            Console.WriteLine();
         }
     }
 }
