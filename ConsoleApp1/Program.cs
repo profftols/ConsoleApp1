@@ -9,27 +9,33 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static void Summa(int[] array, int i, int nac)
+        static void Sumint(int i)
         {
+            int c;
+            int d;
+            int e;
+            int f;
+            i *= 100;
+            //Console.WriteLine(c);
+            Console.WriteLine(i);
+            i *= 10;
+            Console.WriteLine(i);
+            /*d = c %= 10;
+            Console.WriteLine(d);
+            e = d % 1;
+            Console.WriteLine(e);
+            f = c + d + e;
+            Console.WriteLine(f);*/
 
-            nac += array[i];
 
-            i++;
 
-            if (i == array.Length)
 
-            {
-                Console.WriteLine(nac);
-                return;
-            }
-
-            Summa(array, i, nac);
-            
         }
         static void Main(string[] args)
         {
-            int[] araay = { 1, 2, 3 };
-            Summa(araay, 0, 0 );
+            int i = 123;
+            Sumint(i);
+
         }
 
 
