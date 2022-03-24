@@ -9,25 +9,20 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static int Uni(int a)
+        static void Exit(int[] array, int i = 0)
         {
-            int b = a - 5;
-
-            return b;
+            if(i < array.Length)
+            { 
+                Console.WriteLine(array[i]);
+                Exit(array, i+1);
+            }
         }
         static void Main(string[] args)
         {
-            string s = "пустота";
-
-            int num = 99;
-            Uni(num);
-
-            Console.WriteLine($"{num}, {s}");
-
-
-            Console.WriteLine();
-
-
+            int[] araay = { 1, 2, 3, 4, 5, 6, 7 };
+            Exit(araay);
         }
+
+
     }
 }
