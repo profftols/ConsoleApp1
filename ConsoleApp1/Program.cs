@@ -9,18 +9,27 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static void Exit(int[] array, int i = 0)
+        static void Summa(int[] array, int i, int nac)
         {
-            if(i < array.Length)
-            { 
-                Console.WriteLine(array[i]);
-                Exit(array, i+1);
+
+            nac += array[i];
+
+            i++;
+
+            if (i == array.Length)
+
+            {
+                Console.WriteLine(nac);
+                return;
             }
+
+            Summa(array, i, nac);
+            
         }
         static void Main(string[] args)
         {
-            int[] araay = { 1, 2, 3, 4, 5, 6, 7 };
-            Exit(araay);
+            int[] araay = { 1, 2, 3 };
+            Summa(araay, 0, 0 );
         }
 
 
