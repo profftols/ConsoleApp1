@@ -20,9 +20,11 @@ namespace ConsoleApp1
 
             }
             c = i % 10;
+            //Console.WriteLine(c);
             d = i / 10;
+            //Console.WriteLine(d);
             e = c + Sumint(d);
-
+            //Console.WriteLine(e);
             return e;
             
         }
