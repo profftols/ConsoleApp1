@@ -9,42 +9,65 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static void Uni(int[] a, int i = 0, int k = 0)
+        enum Season
         {
+            winter = -1,
+            spring = 0,
+            summer = 1
+        }
 
-            Console.Write($"{a[i]} ");
+        static void GetSeason(int[] par)
+        {
+            int a = 0;
+            int b = 0;
 
-            k += a[i];
-            i++;
-
-            if (i == a.Length)
+            for (int i = 0; i < par.Length; i++)
             {
-                Console.WriteLine($" сумма элементов: {k}");
-                return;
+                if (par[i] >= 0)
+                {
+                    a += par[i];
+                }
+                else
+                {
+                    b += par[i];
+                }
+
+                if (i >= par.Length - 1)
+                {
+                    int v = a + b;
+
+                    if (v > 0)
+                    {
+                        Console.WriteLine(Season.summer);
+                        return;
+                    }
+                    else if (v < 0)
+                    {
+                        Console.WriteLine(Season.winter);
+                        return;
+                    }
+                    else
+                    {
+                        Console.WriteLine(Season.spring);
+                        return;
+                    }
+                }
             }
 
-
-            Uni(a, i, k);
         }
 
-        static int Sum (int a)
-        {
-            if (a < 10)
-                return a;
-            int digit = a % 10;
-            int nextA = a / 10;
-
-            return digit + Sum(nextA);
-        }
         static void Main(string[] args)
         {
-            int result = 561;
-            //int i = 0;
-            //int k = 0;
-            int[] sim = { 1, 4, 6 };
-            Console.Write("вывод массива: ");
-            Uni(sim);
-            Console.WriteLine(Sum(result));
+            Random rand = new Random();
+
+            int[] seas = new int[5];
+
+            for (int i = 0; i < seas.Length; i++)
+            {
+                seas[i] = rand.Next(-4, 4);
+            }
+
+            GetSeason(seas);
         }
     }
 }
