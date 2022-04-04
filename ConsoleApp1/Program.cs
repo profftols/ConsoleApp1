@@ -9,65 +9,59 @@ namespace ConsoleApp1
 {
     class Program
     {
-        enum Season
+        static int Mult(int b, int c)
         {
-            winter = -1,
-            spring = 0,
-            summer = 1
-        }
-
-        static void GetSeason(int[] par)
-        {
-            int a = 0;
-            int b = 0;
-
-            for (int i = 0; i < par.Length; i++)
+            if (true)
             {
-                if (par[i] >= 0)
-                {
-                    a += par[i];
-                }
-                else
-                {
-                    b += par[i];
-                }
 
-                if (i >= par.Length - 1)
-                {
-                    int v = a + b;
-
-                    if (v > 0)
-                    {
-                        Console.WriteLine(Season.summer);
-                        return;
-                    }
-                    else if (v < 0)
-                    {
-                        Console.WriteLine(Season.winter);
-                        return;
-                    }
-                    else
-                    {
-                        Console.WriteLine(Season.spring);
-                        return;
-                    }
-                }
             }
-
+            return c;
         }
 
+        static int Div(int a, int b)
+        {
+
+            return a;
+        }
         static void Main(string[] args)
         {
-            Random rand = new Random();
+            Choise();
+        }
 
-            int[] seas = new int[5];
+        static void Choise()
+        {
 
-            for (int i = 0; i < seas.Length; i++)
+            if (true)
             {
-                seas[i] = rand.Next(-4, 4);
-            }
+                int a, b, c;
 
-            GetSeason(seas);
+                Console.WriteLine("Выберете комманду: \n Деление (1) \n Умножение (2) \n Закрыть програму (0)");
+                a = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Введите число для арифмитической операции: ");
+                c = int.Parse(Console.ReadLine());
+
+                switch (a)
+                {
+                    case 1:
+                        Console.WriteLine("Сколько раз делить?");
+                        b = int.Parse(Console.ReadLine());
+                        Div(b, c);
+                        break;
+                    case 2:
+                        Console.WriteLine("Сколько раз умножить?");
+                        b = int.Parse(Console.ReadLine());
+                        Mult(b, c);
+                        break;
+                    case 0:
+                        return;
+                }/*
+            else
+                {
+                    Console.WriteLine("Итог: \n вывод результата (1) \n вернуться в главное меню (0)");
+
+                }*/
+            }
         }
     }
 }
