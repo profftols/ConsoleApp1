@@ -9,13 +9,13 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static int Mult(int b, int c)
+        static int Mult(in int b, int c)
         {
-            if (true)
-            {
+            if (b == c)
+                return c;
+            a++;
+            Mult(b, a);
 
-            }
-            return c;
         }
 
         static int Div(int a, int b)
