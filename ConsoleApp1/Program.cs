@@ -9,12 +9,15 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static int Mult(in int b, int c)
+        static int Mult(in int b, int c, int a = 0) // c - число умножения, b - число умножения
         {
-            if (b == c)
-                return c;
             a++;
-            Mult(b, a);
+            c *= c;
+
+            if (b == a)
+                return c;
+
+            Mult(b, c, a);
 
         }
 
