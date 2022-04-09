@@ -9,7 +9,7 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static int Mult(in int b, int c, int a = 0) // c - число умножения, b - число умножения
+        static int Mult(in int b, int c, int a) // c - число умножения, b - число умножения
         {
             a++;
             c *= c;
