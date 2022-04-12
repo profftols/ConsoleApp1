@@ -9,61 +9,73 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static int Mult(in int b, int c, int a) // c - число умножения, b - число умножения
+        static void Menu(int b)
         {
-            a++;
-            c *= c;
+            Console.WriteLine("Меню: \n 1 - умножить \n 2 - делить \n 3 - выход");
+            int a = int.Parse(Console.ReadLine());
 
-            if (b == a)
-                return c;
+            if (a >= 3)
+                return;
 
-            Mult(b, c, a);
+            int i = 0;
 
-        }
+            Console.WriteLine("Введите количество итерации: ");
+            int c = int.Parse(Console.ReadLine());
 
-        static int Div(int a, int b)
-        {
-
-            return a;
+            switch (a)
+            {
+                case 1:
+                    Mult(ref b, c);
+                    break;
+                case 2:
+                    Dura(ref b, c);
+                    break;
+            }
+            Result(b);
         }
         static void Main(string[] args)
         {
-            Choise();
+            Console.WriteLine("Напишите число для арифмитической операции: ");
+            int b = int.Parse(Console.ReadLine());
+
+            Menu(b);
         }
 
-        static void Choise()
+        static int Mult(ref int b, int c)
         {
+            if (0 >= c)
+                return b;
 
-            if (true)
+            b *= 2;
+            c--;
+
+            return Mult(ref b, c);
+        }
+
+        static int Dura(ref int b, int c)
+        {
+            if (0 >= c)
+                return b;
+
+            b /= 2;
+            c--;
+
+            return Dura(ref b, c);
+        }
+
+        static void Result(in int b)
+        {
+            Console.WriteLine("Выводим результат? \n 1 - да \n 2 - Выйти из программы");
+            int c = int.Parse(Console.ReadLine());
+
+            if (c == 1)
             {
-                int a, b, c;
-
-                Console.WriteLine("Выберете комманду: \n Деление (1) \n Умножение (2) \n Закрыть програму (0)");
-                a = int.Parse(Console.ReadLine());
-
-                Console.WriteLine("Введите число для арифмитической операции: ");
-                c = int.Parse(Console.ReadLine());
-
-                switch (a)
-                {
-                    case 1:
-                        Console.WriteLine("Сколько раз делить?");
-                        b = int.Parse(Console.ReadLine());
-                        Div(b, c);
-                        break;
-                    case 2:
-                        Console.WriteLine("Сколько раз умножить?");
-                        b = int.Parse(Console.ReadLine());
-                        Mult(b, c);
-                        break;
-                    case 0:
-                        return;
-                }/*
+                Console.WriteLine(b);
+                Menu(b);
+            }
             else
-                {
-                    Console.WriteLine("Итог: \n вывод результата (1) \n вернуться в главное меню (0)");
-
-                }*/
+            {
+                return;
             }
         }
     }
