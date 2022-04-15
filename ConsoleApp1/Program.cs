@@ -9,74 +9,52 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static void Menu(int b)
-        {
-            Console.WriteLine("Меню: \n 1 - умножить \n 2 - делить \n 3 - выход");
-            int a = int.Parse(Console.ReadLine());
-
-            if (a >= 3)
-                return;
-
-            int i = 0;
-
-            Console.WriteLine("Введите количество итерации: ");
-            int c = int.Parse(Console.ReadLine());
-
-            switch (a)
-            {
-                case 1:
-                    Mult(ref b, c);
-                    break;
-                case 2:
-                    Dura(ref b, c);
-                    break;
-            }
-            Result(b);
-        }
         static void Main(string[] args)
         {
-            Console.WriteLine("Напишите число для арифмитической операции: ");
-            int b = int.Parse(Console.ReadLine());
+            Character cher = new Character();
 
-            Menu(b);
+            Console.WriteLine("Меню создание персонажа: ");
+
+            cher = GetNew();
+
+            Console.WriteLine("Пресонаж создан!");
+            
+            cher.Print();
         }
 
-        static int Mult(ref int b, int c)
+        static Character GetNew()
         {
-            if (0 >= c)
-                return b;
+            var cher = new Character();
 
-            b *= 2;
-            c--;
+            cher.level = 1;
 
-            return Mult(ref b, c);
-        }
+            Console.WriteLine("Назовите персонажа");
+            string name = Console.ReadLine();
+            cher.name = name;
 
-        static int Dura(ref int b, int c)
-        {
-            if (0 >= c)
-                return b;
-
-            b /= 2;
-            c--;
-
-            return Dura(ref b, c);
-        }
-
-        static void Result(in int b)
-        {
-            Console.WriteLine("Выводим результат? \n 1 - да \n 2 - Выйти из программы");
-            int c = int.Parse(Console.ReadLine());
-
-            if (c == 1)
+            Console.WriteLine("Выберете рассу");
+            int i = 0;
+            var valu = Enum.GetValues(typeof(Race));
+            foreach (var item in valu)
             {
-                Console.WriteLine(b);
-                Menu(b);
-            }
-            else
+                i++;
+                Console.WriteLine($"{item} = {i}");
+            }    
+            int aa = int.Parse(Console.ReadLine());
+            cher.race = (Race)aa;
+
+            Console.WriteLine("Выберете класс");
+            var volu = Enum.GetValues(typeof(Spec));
+            int b = 0;
+            foreach (var item in volu)
             {
-                return;
+                b++;
+                Console.WriteLine($"{item} = {b}");
             }
+            int bb = int.Parse(Console.ReadLine());
+            cher.spec = (Spec)bb;
+
+            return cher;
         }
     }
 }
