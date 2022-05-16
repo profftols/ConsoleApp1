@@ -15,8 +15,6 @@ namespace ConsoleApp1
             Console.WriteLine(a + 22);
             return;
         }
-
-        
     }
     class Program
     {
