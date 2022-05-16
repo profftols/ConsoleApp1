@@ -14,7 +14,6 @@ namespace ConsoleApp1
         {
             Console.WriteLine(a + 5);
             return;
-            1
         }
 
     }
