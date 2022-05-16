@@ -12,7 +12,7 @@ namespace ConsoleApp1
         private int a { get; set; } = 22;
         public void Som()
         {
-            Console.WriteLine(a + 22);
+            Console.WriteLine(a + 5);
             return;
 
         }
@@ -26,6 +26,7 @@ namespace ConsoleApp1
 
             mob.Som();
             
+            //глюк с репозиторием...
         }
     }
 }
