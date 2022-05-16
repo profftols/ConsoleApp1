@@ -12,7 +12,7 @@ namespace ConsoleApp1
         private int a { get; set; } = 22;
         public void Som()
         {
-            Console.WriteLine(a + 5);
+            Console.WriteLine(a + 4);
             return;
         }
 
