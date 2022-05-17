@@ -7,25 +7,25 @@ using System.Diagnostics;
 
 namespace ConsoleApp1
 {
-    class Sin
-    {
-        private int a { get; set; } = 22;
-        public void Som()
-        {
-            Console.WriteLine(a + 6);
-            return;
-        }
-
-    }
     class Program
     {
         static void Main(string[] gs)
         {
-            Sin mob = new Sin();
+            Cherr cherr = new Cherr();
 
-            mob.Som();
-            
-            //глюк с репозиторием...
+            Console.WriteLine(cherr.A);
+
+            cherr.Ask();
+
+            Console.WriteLine("Какой будет ответ значения А?");
+            int a = int.Parse(Console.ReadLine());
+
+            if (a == cherr.A)
+            {
+                Console.WriteLine("Правильный ответ");
+                return;
+            }
+            Console.WriteLine($"Ответ неверный! правильный ответ {cherr.A}");
         }
     }
 }
