@@ -20,6 +20,7 @@ namespace ConsoleApp1
             Console.WriteLine("Какой будет ответ значения А?");
             int a = int.Parse(Console.ReadLine());
 
+
             if (a == cherr.A)
             {
                 Console.WriteLine("Правильный ответ");
