@@ -12,6 +12,7 @@ namespace ConsoleApp1
         static void Main(string[] gs)
         {
             DateTime.Now.Print();
+
         }
     }
 }
