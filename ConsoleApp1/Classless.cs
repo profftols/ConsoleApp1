@@ -4,26 +4,20 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-    class Cherr
+    static class Cherr
     {
-        private int a = 0;
-
-        public int Ask ()
+        public static void Print(this DateTime dateTime)
         {
-            Console.WriteLine("Выбери опцию из + или -");
-            string v = Console.ReadLine();
-            switch (v)
+            //Console.WriteLine((int)dateTime.DayOfWeek);
+            for (int i = 0; i <= 7; i++)
             {
-                case "+":
-                    return a++;
-                case "-":
-                    return a--;
-                default:
-                    Console.WriteLine("Вы выбрали несуществующий вариант");
-                    return Ask();
+                if ((int)dateTime.DayOfWeek == i)
+                {
+                    Console.WriteLine($"до выходных осталось: {5 - i} дн");
+
+                    return;
+                }
             }
         }
-
-        public int A { get { return a; } }
     }
 }

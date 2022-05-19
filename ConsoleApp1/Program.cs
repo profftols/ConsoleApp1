@@ -11,22 +11,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] gs)
         {
-            Cherr cherr = new Cherr();
-
-            Console.WriteLine(cherr.A);
-
-            cherr.Ask();
-
-            Console.WriteLine("Какой будет ответ значения А?");
-            int a = int.Parse(Console.ReadLine());
-
-
-            if (a == cherr.A)
-            {
-                Console.WriteLine("Правильный ответ");
-                return;
-            }
-            Console.WriteLine($"Ответ неверный! правильный ответ {cherr.A}");
+            DateTime.Now.Print();
         }
     }
 }
