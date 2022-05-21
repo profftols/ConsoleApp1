@@ -9,6 +9,7 @@ namespace ConsoleApp1
         public static void Print(this DateTime dateTime)
         {
             //Console.WriteLine((int)dateTime.DayOfWeek);
+
             for (int i = 0; i <= 7; i++)
             {
                 if ((int)dateTime.DayOfWeek == i)
