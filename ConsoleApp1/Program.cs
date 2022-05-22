@@ -25,17 +25,9 @@ namespace ConsoleApp1
             
             int num = 99;
 
-            Console.WriteLine(Uni(s)); 
+            Console.WriteLine(Uni(sx)); 
 
-            Console.WriteLine($"{num}, {s}");
-        }
-
-        static string Uni(string sex)
-        {
-            //string n = sex;
-            sex = "xe";
-
-            return sex;
+            Console.WriteLine($"{num}, {sx}");
         }
     }
 }
