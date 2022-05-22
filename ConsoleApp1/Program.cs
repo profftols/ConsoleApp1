@@ -12,7 +12,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             string s = "пустота";
-            1
+            
             int num = 99;
 
             Console.WriteLine(Uni(s));
