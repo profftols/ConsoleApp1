@@ -24,7 +24,7 @@ namespace ConsoleApp1
         {
             //string n = sex;1
 
-            sex = "xe";
+            sex = "xe1";
 
             return sex;
         }
