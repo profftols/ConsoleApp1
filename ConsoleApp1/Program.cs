@@ -8,7 +8,7 @@ namespace ConsoleApp1
         {
             string s = "пустота";
 
-            int num = 911;
+            int num = 11;
 
 
             Console.WriteLine($"{num}, {s}");
