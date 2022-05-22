@@ -8,10 +8,19 @@ namespace ConsoleApp1
         {
             string s = "пустота";
 
-            int num = 1211;
+            int num = 45;
+
+            Uni(ref num);
 
             Console.WriteLine($"{num}, {s}");
 
+        }
+        
+        static void Uni (ref int a)
+        {
+            a += a;
+
+            return;
         }
     }
 }
