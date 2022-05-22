@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Diagnostics;
 
 namespace ConsoleApp1
 {
@@ -12,8 +7,8 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             string s = "пустота";
-            
-            int num = 99;
+
+            int num = 993;
 
             Console.WriteLine(Uni(s));
 
@@ -22,7 +17,7 @@ namespace ConsoleApp1
 
         static string Uni(string sx)
         {
-            //string n = s1;
+            //string n = s32;
 
             sx = "xe1";
 
