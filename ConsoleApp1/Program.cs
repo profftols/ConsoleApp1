@@ -9,13 +9,13 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static void Main(string[] gs)
+        static void Main(string[] args)
         {
             string s = "пустота";
-
+            1
             int num = 99;
-            
-            Console.WriteLine(Uni(s)); 
+
+            Console.WriteLine(Uni(s));
 
             Console.WriteLine($"{num}, {s}");
         }
