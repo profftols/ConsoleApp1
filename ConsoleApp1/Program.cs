@@ -14,7 +14,7 @@ namespace ConsoleApp1
             string s = "пустота";
 
             int num = 99;
-            1
+            
             Console.WriteLine(Uni(s)); 
 
             Console.WriteLine($"{num}, {s}");
