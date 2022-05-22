@@ -6,21 +6,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string s = "пустота";
+            DateTime.Now.Print();
 
-            int num = 48;
-
-            Uni(ref num);
-
-            Console.WriteLine($"{num}, {s}");
-
-        }
-        
-        static void Uni (ref int a)
-        {
-            a += a;
-
-            return;
         }
     }
 }
