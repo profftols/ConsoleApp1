@@ -10,7 +10,6 @@ namespace ConsoleApp1
 
             int num = 11;
 
-
             Console.WriteLine($"{num}, {s}");
 
         }
