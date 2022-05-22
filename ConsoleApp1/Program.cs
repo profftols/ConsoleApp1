@@ -9,20 +9,23 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static int Uni(int a)
-        {
-            int b = a - 5;
-
-            return b;
-        }
         static void Main(string[] args)
         {
             string s = "пустота";
 
             int num = 99;
-            Uni(num);
+
+            Console.WriteLine(Uni(s)); 
 
             Console.WriteLine($"{num}, {s}");
+        }
+
+        static string Uni(string sex)
+        {
+            //string n = sex;
+            sex = "xe";
+
+            return sex;
         }
     }
 }
