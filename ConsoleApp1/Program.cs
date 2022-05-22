@@ -20,13 +20,13 @@ namespace ConsoleApp1
             Console.WriteLine($"{num}, {s}");
         }
 
-        static string Uni(string sex)
+        static string Uni(string sx)
         {
             //string n = s1;
 
-            sex = "xe1";
+            sx = "xe1";
 
-            return sex;
+            return sx;
         }
     }
 }
