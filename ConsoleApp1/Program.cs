@@ -22,7 +22,7 @@ namespace ConsoleApp1
 
         static string Uni(string sex)
         {
-            //string n = sex;
+            //string n = s1;
 
             sex = "xe1";
 
