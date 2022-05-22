@@ -22,6 +22,20 @@ namespace ConsoleApp1
             sx = "xe1";
 
             return sx;
+            
+            int num = 99;
+
+            Console.WriteLine(Uni(s)); 
+
+            Console.WriteLine($"{num}, {s}");
+        }
+
+        static string Uni(string sex)
+        {
+            //string n = sex;
+            sex = "xe";
+
+            return sex;
         }
     }
 }
