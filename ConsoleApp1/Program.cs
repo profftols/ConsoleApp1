@@ -11,7 +11,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] gs)
         {
-
+            1
             DateTime.Now.Print();
 
         }
