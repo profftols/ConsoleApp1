@@ -11,9 +11,21 @@ namespace ConsoleApp1
     {
         static void Main(string[] gs)
         {
-            
-            DateTime.Now.Print();
+            string s = "пустота";
 
+            int num = 99;
+
+            Console.WriteLine(Uni(s)); 
+
+            Console.WriteLine($"{num}, {s}");
+        }
+
+        static string Uni(string sex)
+        {
+            //string n = sex;
+            sex = "xe";
+
+            return sex;
         }
     }
 }
