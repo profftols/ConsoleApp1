@@ -19,7 +19,7 @@ namespace ConsoleApp1
         {
             //string n = s32;
 
-            sx = "xe311";
+            sx = "xe1";
 
             return sx;
             
