@@ -8,7 +8,7 @@ namespace ConsoleApp1
         {
             string s = "пустота";
 
-            int num = 451;
+            int num = 45;
 
             Uni(ref num);
 
