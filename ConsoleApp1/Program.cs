@@ -8,18 +8,10 @@ namespace ConsoleApp1
         {
             string s = "пустота";
 
-            int num = 9;
+            int num = 91;
 
 
             Console.WriteLine($"{num}, {s}");
-
-            sx = "xe21";
-
-            return sx;
-            
-            int num = 11;
-
-            Console.WriteLine(Uni(sx)); 
 
         }
     }
