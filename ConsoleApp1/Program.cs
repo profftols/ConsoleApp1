@@ -23,7 +23,7 @@ namespace ConsoleApp1
 
             return sx;
             
-            int num = 959;
+            int num = 95;
 
             Console.WriteLine(Uni(sx)); 
 
