@@ -8,7 +8,7 @@ namespace ConsoleApp1
         {
             string s = "пустота";
 
-            int num = 993;
+            int num = 93;
 
             Console.WriteLine(Uni(s));
 
@@ -30,14 +30,6 @@ namespace ConsoleApp1
             Console.WriteLine(Uni(s)); 
 
             Console.WriteLine($"{num}, {s}");
-        }
-
-        static string Uni(string sex)
-        {
-            //string n = sex;
-            sex = "xe";
-
-            return sex;
         }
     }
 }
