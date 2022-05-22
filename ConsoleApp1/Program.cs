@@ -11,18 +11,9 @@ namespace ConsoleApp1
     {
         static void Uni(int[] a, int i = 0, int k = 0)
         {
-
-            Console.Write($"{a[i]} ");
-
-            k += a[i];
-
-            i++;
-
-            if (i == a.Length)
-            {
-                Console.WriteLine($" сумма элементов: {k}");
-                return;
-            }
+            Console.WriteLine();
+            
+        }
 
 
             Uni(a, i, k);
