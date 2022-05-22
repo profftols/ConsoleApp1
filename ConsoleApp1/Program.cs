@@ -7,7 +7,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             DateTime.Now.Print();
-
+            //2
         }
     }
 }
