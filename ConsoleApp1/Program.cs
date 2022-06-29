@@ -2,12 +2,21 @@
 
 namespace ConsoleApp1
 {
+    class Fop
+    {
+        public int a = 30;
+        public int b = 29;
+        public string ask = "sum";  
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            DateTime.Now.Print();
-            //2
+            Cat num = new Cat { Age = 4, Name = "Bars" };
+            Fop fop = new Fop();
+
+            Console.WriteLine($"{num.Age}, { num.Name}, {fop.ask}");
+
         }
     }
 }
