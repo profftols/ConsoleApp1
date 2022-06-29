@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         public int a = 30;
         public int b = 29;
-        public string ask = "sum11";  
+        public string ask = "sum21";  
     }
     class Program
     {
