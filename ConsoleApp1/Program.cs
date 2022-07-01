@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string s = "пустота";
+            string s = "пустот1а";
 
             int num = 93;
 
