@@ -12,7 +12,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Cat num = new Cat { Age = 4, Name = "Bars" };
+            Cat num = new Cat { Age = 4, Name = "Ba1rs" };
             Fop fop = new Fop();
 
             Console.WriteLine($"{num.Age}, { num.Name}, {fop.ask}");
