@@ -4,11 +4,8 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-    class Cat
+    class Class1
     {
-        public int Age { get; set; }
-
-        public string Name; //{ get; set; }
-
+        public int b = 3;
     }
 }

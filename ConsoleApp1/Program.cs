@@ -1,22 +1,31 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace ConsoleApp1
 {
-    class Fop
-    {
-        public int a = 30;
-        public int b = 29;
-        public string ask = "su12m";  
-    }
     class Program
     {
         static void Main(string[] args)
         {
-            Cat num = new Cat { Age = 4, Name = "Ba1rs" };
-            Fop fop = new Fop();
+            Console.WriteLine("Выбери от 1 до 2");
 
-            Console.WriteLine($"{num.Age}, { num.Name}, {fop.ask}");
+            int a = int.Parse(Console.ReadLine());
 
+            try
+            {
+                Choise(a);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        static int Choise(int a)
+        {
+            
         }
     }
 }
