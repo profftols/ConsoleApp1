@@ -26,6 +26,7 @@ namespace ConsoleApp1
         static int Choise(int a)
         {
             a = 3;
+            return a;
         }
     }
 }
