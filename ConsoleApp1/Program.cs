@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace ConsoleApp1
 {
@@ -6,19 +8,31 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Выбери от 1 до 2");
+
+            int a = int.Parse(Console.ReadLine());
             string s = "пустот1а";
 
             int num = 93;
 
-            Console.WriteLine(Uni(s));
-
+            try
+            {
+                Choise(a);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            
             Console.WriteLine($"{num}, {s}");
 
             Console.ReadLine(); 
         }
 
-        static string Uni(string sx)
+        static int Choise(int a)
         {
+            a = 3;
+            
             //string n = s32;
 
             sx = "xe12";
