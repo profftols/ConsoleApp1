@@ -32,18 +32,6 @@ namespace ConsoleApp1
         static int Choise(int a)
         {
             a = 3;
-            
-            //string n = s32;
-
-            sx = "xe12";
-
-            return sx;
-            
-            int num = 99;
-
-            Console.WriteLine(Uni(s)); 
-
-            Console.WriteLine($"{num}, {s}");
         }
     }
 }
