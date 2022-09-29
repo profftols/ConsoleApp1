@@ -8,30 +8,23 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Выбери от 1 до 2");
-
-            int a = int.Parse(Console.ReadLine());
-            string s = "пустот1а";
-
-            int num = 93;
-
-            try
-            {
-                Choise(a);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            Console.WriteLine("Мы пишем приложение для выбора цифр \n Поэтому выберете цифру от 1 до 3");
+            int choice = int.Parse(Console.ReadLine());
             
-            Console.WriteLine($"{num}, {s}");
+            switch(choice)
+            {
+                case 1:
+                    Console.WriteLine($"вы выбрали {choice}");
+                    break;
 
-            Console.ReadLine(); 
-        }
+                case 2:
+                    Console.WriteLine($"вы выбрали {choice}");
+                    break;
 
-        static int Choise(int a)
-        {
-            a = 3;
+                default:
+                    Console.WriteLine("вы вышли за границы выбора");
+                    break;
+            }
         }
     }
 }
