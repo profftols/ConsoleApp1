@@ -78,7 +78,7 @@ namespace ConsoleApp1
             return true;
         }
 
-        private static void playerMove()
+        private static void PlayerMove()
         {
             int x, y;
             do
@@ -95,6 +95,15 @@ namespace ConsoleApp1
 
         private static bool CheckWin(char sym)
         {
+            for (int i = 0; i <= 2; i++)
+            {
+                if (field[0, i] == sym | field[i, 2] == sym)
+                {
+                    if (i == 2)
+                        return true;
+                }
+            }
+            /*
             if (field[0, 0] == sym && field[0, 1] == sym && field[0, 2] == sym)
             {
                 return true;
@@ -128,7 +137,7 @@ namespace ConsoleApp1
             if (field[2, 0] == sym && field[1, 1] == sym && field[0, 2] == sym)
             {
                 return true;
-            }
+            }*/
             return false;
         }
 
@@ -144,32 +153,32 @@ namespace ConsoleApp1
         }
 
 
-        //static void Main(string[] args)
-        //{
-        //    InitField();
-        //    PrintField();
-        //    do
-        //    {
-        //        playerMove();
-        //        Console.WriteLine("Ваш ход на поле");
-        //        PrintField();
-        //        if (CheckWin(PLAYER_DOT))
-        //        {
-        //            Console.WriteLine("Вы выиграли");
-        //            break;
-        //        }
-        //        else if (IsFieldFull()) break;
-        //        AiMove();
-        //        Console.WriteLine("Ход Компа на поле");
-        //        PrintField();
-        //        if (CheckWin(AI_DOT))
-        //        {
-        //            Console.WriteLine("Выиграли Комп");
-        //            break;
-        //        }
-        //        else if (IsFieldFull()) break;
-        //    } while (true);
-        //    Console.WriteLine("!Конец игры!");
-        //}
+        static void Main(string[] args)
+        {
+            InitField();
+            PrintField();
+            do
+            {
+                PlayerMove();
+                Console.WriteLine("ваш ход на поле");
+                PrintField();
+                if (CheckWin(PLAYER_DOT))
+                {
+                    Console.WriteLine("вы выиграли");
+                    break;
+                }
+                else if (IsFieldFull()) break;
+                //AiMove();
+                Console.WriteLine("ход компа на поле");
+                PrintField();
+                if (CheckWin(AI_DOT))
+                {
+                    Console.WriteLine("выиграли комп");
+                    break;
+                }
+                else if (IsFieldFull()) break;
+            } while (true);
+            Console.WriteLine("!конец игры!");
+        }
     }
 }
