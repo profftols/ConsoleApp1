@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using System.Diagnostics;
-
+using System.Globalization;
 
 namespace ConsoleApp1
 {
@@ -95,50 +95,94 @@ namespace ConsoleApp1
 
         private static bool CheckWin(char sym)
         {
-            for (int i = 0; i <= 2; i++)
+            for (int y = 0; y <= 2; y++)
             {
-                if (field[0, i] == sym | field[i, 2] == sym)
-                {
-                    if (i == 2)
-                        return true;
-                }
+                if (CheckHorVert(y, sym) >= 3)
+                    return true;
             }
+
+            if (CheckDiag(sym) >= 3)
+                return true;
             /*
-            if (field[0, 0] == sym && field[0, 1] == sym && field[0, 2] == sym)
+            if (field[0, 0] == sym && field[0, 1] == sym && field[0, 2] == sym) v
             {
                 return true;
             }
-            if (field[1, 0] == sym && field[1, 1] == sym && field[1, 2] == sym)
+            if (field[1, 0] == sym && field[1, 1] == sym && field[1, 2] == sym) v
             {
                 return true;
             }
-            if (field[2, 0] == sym && field[2, 1] == sym && field[2, 2] == sym)
+            if (field[2, 0] == sym && field[2, 1] == sym && field[2, 2] == sym) v
             {
                 return true;
             }
-
-            if (field[0, 0] == sym && field[1, 0] == sym && field[2, 0] == sym)
+            if (field[0, 0] == sym && field[1, 0] == sym && field[2, 0] == sym) 
             {
                 return true;
             }
-            if (field[0, 1] == sym && field[1, 1] == sym && field[2, 1] == sym)
+            if (field[0, 1] == sym && field[1, 1] == sym && field[2, 1] == sym) 
             {
                 return true;
             }
-            if (field[0, 2] == sym && field[1, 2] == sym && field[2, 2] == sym)
+            if (field[0, 2] == sym && field[1, 2] == sym && field[2, 2] == sym) 
             {
                 return true;
             }
-
-            if (field[0, 0] == sym && field[1, 1] == sym && field[2, 2] == sym)
+            if (field[0, 0] == sym && field[1, 1] == sym && field[2, 2] == sym) 
             {
                 return true;
             }
-            if (field[2, 0] == sym && field[1, 1] == sym && field[0, 2] == sym)
+            if (field[2, 0] == sym && field[1, 1] == sym && field[0, 2] == sym) 
             {
                 return true;
             }*/
             return false;
+        }
+
+        private static int CheckHorVert(int y, char sym)
+        {
+            int v = 0;
+            for (int x = 0; x <= 2; x++) // check horizont
+            {
+                if (field[y, x] == sym ) 
+                    v++;
+                if (v == 3)
+                    return v;
+            }
+
+            v = 0;
+            for (int x = 0; x <= 2; x++) // check vertical
+            {
+                if (field[x, y] == sym)
+                    v++;
+                if (v == 3)
+                    return v;
+            }
+            return v;
+
+        }
+
+        private static int CheckDiag(char sym)
+        {
+            int v = 0;
+            
+            for (int i = 0; i <= 2; i++) //check diagonal 1x1 2x2 3x3
+            {
+                if (field[i, i] == sym)
+                    v++;
+                if (v == 3)
+                    return v;
+            }
+
+            v = 0;
+            for (int i = 2; i >= 0; i--)
+            {
+                if (field[i, v] == sym)
+                    v++;
+                if (v == 3)
+                    return v;
+            }
+            return v; 
         }
 
         private static void AiMove()
