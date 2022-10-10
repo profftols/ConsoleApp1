@@ -93,7 +93,7 @@ namespace ConsoleApp1
             SetSym(y, x, PLAYER_DOT);
         }
 
-        private static bool CheckWin(char sym)
+        public static bool CheckWin(char sym)
         {
             for (int y = 0; y <= 2; y++)
             {
@@ -103,39 +103,7 @@ namespace ConsoleApp1
 
             if (CheckDiag(sym) >= 3)
                 return true;
-            /*
-            if (field[0, 0] == sym && field[0, 1] == sym && field[0, 2] == sym) v
-            {
-                return true;
-            }
-            if (field[1, 0] == sym && field[1, 1] == sym && field[1, 2] == sym) v
-            {
-                return true;
-            }
-            if (field[2, 0] == sym && field[2, 1] == sym && field[2, 2] == sym) v
-            {
-                return true;
-            }
-            if (field[0, 0] == sym && field[1, 0] == sym && field[2, 0] == sym) 
-            {
-                return true;
-            }
-            if (field[0, 1] == sym && field[1, 1] == sym && field[2, 1] == sym) 
-            {
-                return true;
-            }
-            if (field[0, 2] == sym && field[1, 2] == sym && field[2, 2] == sym) 
-            {
-                return true;
-            }
-            if (field[0, 0] == sym && field[1, 1] == sym && field[2, 2] == sym) 
-            {
-                return true;
-            }
-            if (field[2, 0] == sym && field[1, 1] == sym && field[0, 2] == sym) 
-            {
-                return true;
-            }*/
+
             return false;
         }
 
@@ -212,7 +180,7 @@ namespace ConsoleApp1
                     break;
                 }
                 else if (IsFieldFull()) break;
-                //AiMove();
+                AiMove();
                 Console.WriteLine("ход компа на поле");
                 PrintField();
                 if (CheckWin(AI_DOT))
@@ -223,6 +191,7 @@ namespace ConsoleApp1
                 else if (IsFieldFull()) break;
             } while (true);
             Console.WriteLine("!конец игры!");
+            Console.ReadKey();
         }
     }
 }
