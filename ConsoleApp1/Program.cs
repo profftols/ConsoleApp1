@@ -30,23 +30,23 @@ namespace ConsoleApp1
             {
                 do
                 {
-                    mass[y, x] = ++num;
+                    mass[y, x] = num++;
                     x++;
-                } while (x < x_size);
+                } while (x < y_size);
                 y++;
             }
         }
 
         static void Side(ref int y, ref int x, int[,] mass)
         {
-            if (x == x_size)
+            if (x == y_size)
             {
                 x--;
                 do
                 {
                     mass[y, x] = num++;
                     y++;
-                } while (y < y_size);
+                } while (y < x_size);
                 y--;
                 x--;
             }
@@ -89,7 +89,7 @@ namespace ConsoleApp1
             Console.WriteLine("Задаим размер: \n1) Y координат \n2) X координат \n");
 
             x_size = 3; //int.Parse(Console.ReadLine());
-            y_size = 3; //int.Parse(Console.ReadLine());
+            y_size = 5; //int.Parse(Console.ReadLine());
 
             int[,] mass = new int[x_size, y_size];
 
@@ -101,7 +101,7 @@ namespace ConsoleApp1
              * 4. вверх минус
              * (реализовать проверку заполненности массива, иначе повторить)
              */
-
+            
             Straight(ref y, ref x, mass);
             Side(ref y, ref x, mass);
             Bottom(ref y, ref x, mass);
