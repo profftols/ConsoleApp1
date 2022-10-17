@@ -88,8 +88,8 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Задаим размер: \n1) Y координат \n2) X координат \n");
 
-            x_size = 3; //int.Parse(Console.ReadLine());
-            y_size = 5; //int.Parse(Console.ReadLine());
+            x_size = 4; //int.Parse(Console.ReadLine());
+            y_size = 4; //int.Parse(Console.ReadLine());
 
             int[,] mass = new int[x_size, y_size];
 
@@ -101,12 +101,18 @@ namespace ConsoleApp1
              * 4. вверх минус
              * (реализовать проверку заполненности массива, иначе повторить)
              */
-            
-            Straight(ref y, ref x, mass);
-            Side(ref y, ref x, mass);
-            Bottom(ref y, ref x, mass);
-            Middle(ref y, ref x, mass);
+            do
+            {
+                Straight(ref y, ref x, mass);
+                if (mass[y, x-1] == 0)
+                    Side(ref y, ref x, mass);
+                if (mass[y, x] == 0)
+                    Bottom(ref y, ref x, mass);
+                if (mass[y, x] == 0)
+                    Middle(ref y, ref x, mass);
+            } while (mass[y, x] == 0);
 
+            
             Console.WriteLine();
             for (int h = 0; h < x_size; h++)
             {
