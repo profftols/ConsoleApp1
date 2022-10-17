@@ -50,7 +50,7 @@ namespace ConsoleApp1
                 y--;
                 x--;
             }
-            else
+            else if (mass[y,x] == 0)
             {
                 do
                 {
@@ -64,13 +64,27 @@ namespace ConsoleApp1
 
         static void Bottom(ref int y, ref int x, int[,] mass)
         {
-            do
+            if (y + 1 == x_size)
             {
-                mass[y, x] = num++;
-                x--;
-            } while (x >= 0);
-            y--;
-            x++;
+                do
+                {
+                    mass[y, x] = num++;
+                    x--;
+                } while (x >= 0);
+                y--;
+                x++;
+            }
+            else
+            {
+                do
+                {
+                    mass[y, x] = num++;
+                    x--;
+                } while (mass[y, x] == 0);
+                y--;
+                x++;
+            }
+
         }
 
         static void Middle(ref int y, ref int x, int[,] mass)
@@ -88,8 +102,8 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Задаим размер: \n1) Y координат \n2) X координат \n");
 
-            x_size = 4; //int.Parse(Console.ReadLine());
-            y_size = 4; //int.Parse(Console.ReadLine());
+            x_size = 6; //int.Parse(Console.ReadLine());
+            y_size = 6; //int.Parse(Console.ReadLine());
 
             int[,] mass = new int[x_size, y_size];
 
@@ -104,8 +118,8 @@ namespace ConsoleApp1
             do
             {
                 Straight(ref y, ref x, mass);
-                if (mass[y, x-1] == 0)
-                    Side(ref y, ref x, mass);
+                Side(ref y, ref x, mass);
+
                 if (mass[y, x] == 0)
                     Bottom(ref y, ref x, mass);
                 if (mass[y, x] == 0)
