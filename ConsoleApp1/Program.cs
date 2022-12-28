@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace ConsoleApp1
 {
@@ -6,11 +7,31 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Выводим номер дз урока");
+            string str = Console.ReadLine();
+
+            switch (str)
+            {
+                case "1":
+                    LessionOne();
+                    break;
+                case "2":
+                    LessionTwo();
+                    break;
+
+                case "0":
+                    return;
+            }
+
+        }
+        #region Lession1
+        static void LessionOne()
+        {
             long n = long.Parse(Console.ReadLine());
 
             long b = n;
 
-            //NumberType(n); //1
+            NumberType(n); //1
 
             //Console.WriteLine("\nсложность функции: 1+N*N*N+1+1+1N "); //2
 
@@ -21,7 +42,6 @@ namespace ConsoleApp1
             Console.WriteLine("\n\nЦикл:");
             FibonCycle(b);
         }
-
         static void NumberType(long n)
         {
             Console.WriteLine("Начало\n");
@@ -71,5 +91,25 @@ namespace ConsoleApp1
 
             Console.WriteLine(result);
         }
+        #endregion
+
+        #region Lession2
+        static void LessionTwo()
+        {
+            int value = 1;
+            Node node= new Node();
+
+            AddAfterItem(node, value);
+        }
+
+        static void AddAfterItem(Node node, int value)
+        {
+            var newNode = new Node { Value = value };
+            var nextItem = node.NextItem;
+            node.NextItem = newNode;
+            newNode.NextItem = nextItem;
+        }
+
+        #endregion
     }
 }

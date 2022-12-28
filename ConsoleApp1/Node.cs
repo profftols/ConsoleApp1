@@ -4,8 +4,9 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-    class Person
+    class Node
     {
-       
+        public int Value { get; set; } = 3;
+        public Node NextItem { get; set; }
     }
 }
