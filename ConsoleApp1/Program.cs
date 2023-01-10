@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Threading;
+using System.Collections;
+using System.Collections.Generic;
+
 
 namespace ConsoleApp1
 {
@@ -13,10 +16,10 @@ namespace ConsoleApp1
             switch (str)
             {
                 case "1":
-                    LessionOne();
+                    MethodReckurs();
                     break;
                 case "2":
-                    LessionTwo();
+                    LinkenList();
                     break;
 
                 case "0":
@@ -25,7 +28,7 @@ namespace ConsoleApp1
 
         }
         #region Lession1
-        static void LessionOne()
+        static void MethodReckurs()
         {
             long n = long.Parse(Console.ReadLine());
 
@@ -94,20 +97,17 @@ namespace ConsoleApp1
         #endregion
 
         #region Lession2
-        static void LessionTwo()
+        static void LinkenList()
         {
-            int value = 1;
-            Node node= new Node();
+            DoublyLinkedList<string> linked = new DoublyLinkedList<string>();
+            linked.AddList("sare");
+            linked.AddList("konor");
+            //linked.AddList("ssd");
 
-            AddAfterItem(node, value);
-        }
-
-        static void AddAfterItem(Node node, int value)
-        {
-            var newNode = new Node { Value = value };
-            var nextItem = node.NextItem;
-            node.NextItem = newNode;
-            newNode.NextItem = nextItem;
+            foreach (var link in linked)
+            {
+                Console.WriteLine(link);
+            }
         }
 
         #endregion

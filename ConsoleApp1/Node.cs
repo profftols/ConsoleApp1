@@ -4,9 +4,14 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-    class Node
+    class Node<T>
     {
-        public int Value { get; set; } = 3;
-        public Node NextItem { get; set; }
+        public Node (T item)
+        {
+            Item = item;
+        }
+        public T Item { get; set; }
+        public Node<T> NextItem { get; set; }
+        public Node<T> PrevItem { get; set; }
     }
 }
