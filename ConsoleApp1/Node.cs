@@ -12,6 +12,6 @@ namespace ConsoleApp1
         }
         public T Item { get; set; }
         public Node<T> NextItem { get; set; }
-        public Node<T> PrevItem { get; set; }
+        public Node<T> BackItem { get; set; }
     }
 }

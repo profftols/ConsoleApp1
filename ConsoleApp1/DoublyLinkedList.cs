@@ -20,10 +20,22 @@ namespace ConsoleApp1
             else
             {
                 tail.NextItem = list;
-                list.PrevItem = tail;
+                list.BackItem = tail;
             }
             tail = list;
             count++;
+        }
+
+        public bool Remove (T value)
+        {
+            Node<T> list = head;
+
+            while(list != null)
+            {
+
+            }
+
+            return true;
         }
 
         IEnumerator IEnumerable.GetEnumerator()
@@ -47,7 +59,7 @@ namespace ConsoleApp1
             while (current != null)
             {
                 yield return current.Item;
-                current = current.PrevItem;
+                current = current.BackItem;
             }
         }
     }

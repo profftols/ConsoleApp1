@@ -102,8 +102,8 @@ namespace ConsoleApp1
             DoublyLinkedList<string> linked = new DoublyLinkedList<string>();
             linked.AddList("sare");
             linked.AddList("konor");
-            //linked.AddList("ssd");
-
+            linked.AddList("ssd");
+            linked.Remove(1);
             foreach (var link in linked)
             {
                 Console.WriteLine(link);
