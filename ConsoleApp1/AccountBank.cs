@@ -9,41 +9,20 @@ namespace ConsoleApp1
     {
         public enum AccType
         {
-            Deposit = 1,
+            Deposit,
             Credit
         }
 
+        public int a;
+
+
         static private long NumberCheck;
+        public long NumLogin;
         private long BalanceD;
         private long BalanceC;
-        private long NumLogin;
-
-        public AccountBank(AccType acc)
-        {
-            switch (acc)
-            {
-                case AccType.Deposit: Console.WriteLine($"Баланс депозитного: {BalanceD}"); break;
-                case AccType.Credit: Console.WriteLine($"Баланс кредитного: {BalanceC}"); break;
-            }
-
-            NumLogin = GenerateNum();
-        }
 
         public AccountBank(long balanceD, long balanceC)
         {
-            BalanceD = balanceD;
-            BalanceC = balanceC;
-            NumLogin = GenerateNum();
-        }
-
-        public AccountBank(long balanceD, long balanceC, AccType acc)
-        {
-            switch (acc)
-            {
-                case AccType.Deposit: Console.WriteLine($"Баланс депозитного: {BalanceD}"); break;
-                case AccType.Credit: Console.WriteLine($"Баланс кредитного: {BalanceC}"); break;
-            }
-
             BalanceD = balanceD;
             BalanceC = balanceC;
             NumLogin = GenerateNum();
@@ -54,6 +33,25 @@ namespace ConsoleApp1
             Random genr = new Random();
             NumberCheck = genr.Next(9999999);
             return NumberCheck;
+
+        }
+
+        public void ReadBank()
+        {
+            Console.WriteLine($"\nНомер счета: {NumLogin}\n{AccType.Credit} баланс: {BalanceC}\n{AccType.Deposit} баланс: {BalanceD} ");
+        }
+
+        public void Transaction(AccountBank accountBank, long sum)
+        {
+            if (accountBank.BalanceD >= sum)
+            {
+                accountBank.BalanceD -= sum;
+                BalanceD += sum;
+            }
+            else
+            {
+                Console.WriteLine("Недостаточно средств для транзакции.");
+            }
         }
     }
 }

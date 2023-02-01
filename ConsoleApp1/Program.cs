@@ -10,23 +10,27 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            
-            AccountBank client = new AccountBank(0, 0, 50000, 0);
-            AccountBank clienttwo = new AccountBank(400, 600, 200, 40000);
 
-            do
-            {
-                Console.WriteLine("Информация о счете: \n1.Расчетный\n2.Депозитный\n3.Кредитный\n4.Бюджетный");
-                int check = int.Parse(Console.ReadLine());
+            AccountBank client = new AccountBank(0, 0);
+            AccountBank clienttwo = new AccountBank(200, 40000);
 
-                Console.Clear();
 
-                client.CheckBalance((AccountBank.AccType)check);
-                clienttwo.CheckBalance((AccountBank.AccType)check);
+            client.ReadBank();
+            Console.WriteLine();
+            clienttwo.ReadBank();
 
-                Console.WriteLine();
+            Console.ReadKey();
+            Console.Clear();
 
-            } while (true);
+            client.Transaction(clienttwo, 100);
+
+
+            client.ReadBank();
+            Console.WriteLine();
+            clienttwo.ReadBank();
+
+            Console.ReadKey();
+            Console.WriteLine();
         }
     }
 }
