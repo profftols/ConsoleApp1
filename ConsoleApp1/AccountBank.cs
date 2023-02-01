@@ -16,8 +16,12 @@ namespace ConsoleApp1
         public int a;
 
 
-        static private long NumberCheck;
-        public long NumLogin;
+        static private long numberCheck;
+        public long NumberCheck
+        {
+            get; 
+            private set;
+        }
         private long BalanceD;
         private long BalanceC;
 
@@ -25,20 +29,20 @@ namespace ConsoleApp1
         {
             BalanceD = balanceD;
             BalanceC = balanceC;
-            NumLogin = GenerateNum();
+            NumberCheck = GenerateNum();
         }
 
         public static long GenerateNum()
         {
             Random genr = new Random();
-            NumberCheck = genr.Next(9999999);
-            return NumberCheck;
+            numberCheck = genr.Next(9999999);
+            return numberCheck;
 
         }
 
         public void ReadBank()
         {
-            Console.WriteLine($"\nНомер счета: {NumLogin}\n{AccType.Credit} баланс: {BalanceC}\n{AccType.Deposit} баланс: {BalanceD} ");
+            Console.WriteLine($"\nНомер счета: {NumberCheck}\n{AccType.Credit} баланс: {BalanceC}\n{AccType.Deposit} баланс: {BalanceD} ");
         }
 
         public void Transaction(AccountBank accountBank, long sum)
