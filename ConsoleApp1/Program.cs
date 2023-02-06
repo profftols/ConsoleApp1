@@ -12,9 +12,9 @@ namespace ConsoleApp1
         {
 
             AccountBank client = new AccountBank(0, 0);
-            AccountBank clienttwo = new AccountBank(200, 40000);
+            AccountBank clienttwo = new AccountBank(300, 40000);
 
-
+            /*
             client.ReadBank();
             Console.WriteLine();
             clienttwo.ReadBank();
@@ -28,7 +28,12 @@ namespace ConsoleApp1
             client.ReadBank();
             Console.WriteLine();
             clienttwo.ReadBank();
+            */
 
+            Console.WriteLine("Введите текст");
+            string text = Console.ReadLine();
+
+            Console.WriteLine(client.RetString(text)); 
             Console.ReadKey();
             Console.WriteLine();
         }

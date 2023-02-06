@@ -57,5 +57,16 @@ namespace ConsoleApp1
                 Console.WriteLine("Недостаточно средств для транзакции.");
             }
         }
+
+        public string RetString (string text)
+        {
+            char[] chars = text.ToCharArray();
+            text = null;
+            for (int i = chars.Length - 1; i >= 0 ; i--)
+            {
+                text += $"{chars[i]}";
+            }
+            return text;
+        }
     }
 }
