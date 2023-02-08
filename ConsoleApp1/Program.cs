@@ -11,9 +11,9 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
+            /*
             AccountBank client = new AccountBank(0, 0);
             AccountBank clienttwo = new AccountBank(300, 40000);
-
             
             client.ReadBank();
             Console.WriteLine();
@@ -24,11 +24,9 @@ namespace ConsoleApp1
 
             client.Transaction(clienttwo, 100);
 
-
             client.ReadBank();
             Console.WriteLine();
             clienttwo.ReadBank();
-            
 
             Console.WriteLine("Введите текст");
             string text = Console.ReadLine();
@@ -36,6 +34,11 @@ namespace ConsoleApp1
             Console.WriteLine(client.RetString(text)); 
             Console.ReadKey();
             Console.WriteLine();
+            */
+
+            Building bdd = new Building(8, 25, 5, 200, 1);
+            bdd.ReadBuild();
+            bdd.Read();
         }
     }
 }
