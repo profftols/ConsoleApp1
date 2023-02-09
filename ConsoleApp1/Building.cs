@@ -60,20 +60,37 @@ namespace ConsoleApp1
             switch(value)
             {
                 case "1":
+                    UpFloor();
+                    break;
 
-                    break; 
                 case "2":
-
+                    ApartmentsPorch();
                     break;
+
                 case "3":
-
+                    ApartmentsFloor();
                     break;
-                    
+
                 default: 
                     Console.WriteLine("Диапазон от 1 до 3");
                     Read();
                     break;
             }
+        }
+
+        private void UpFloor()
+        {
+            Console.WriteLine($"Высота одного этажа: {heightbuild / floor}m");
+        }
+        
+        private void ApartmentsPorch()
+        {
+            Console.WriteLine($"Количество квартир в подьезде: {apartments / porch}");
+        }
+
+        private void ApartmentsFloor()
+        {
+            Console.WriteLine($"Количество квартир на этаже: {(apartments / porch) / floor}");
         }
     }
 }
