@@ -34,6 +34,7 @@ namespace ConsoleApp1
             heightbuild = HeightFloor(Height);
             apartments = Apart;
             porch = Porch;
+            
         }
         
         public void ReadBuild()
