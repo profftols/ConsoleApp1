@@ -38,7 +38,9 @@ namespace ConsoleApp1
 
             Building bdd = new Building(8, 25, 5, 200, 1);
             bdd.ReadBuild();
-            bdd.Read();
+
+            Building Asd = new Building(10, 25, 5, 100, 3);
+            Asd.ReadBuild();
         }
     }
 }

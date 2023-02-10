@@ -28,8 +28,7 @@ namespace ConsoleApp1
 
         public Building(int Number, double Height, int Floor, int Apart, int Porch)
         {
-            Numberbuild = Number;
-            numberbuild = Numberbuild;
+            GenerateNumb(Number);
             floor = Floor;
             heightbuild = HeightFloor(Height);
             apartments = Apart;
@@ -40,6 +39,7 @@ namespace ConsoleApp1
         public void ReadBuild()
         {
             Console.WriteLine($"Здание с адресом: {numberbuild}\nЭтажность: {floor}\nПодьездов: {porch}\nКоличество квартир:{apartments}\nВысота здания: {heightbuild}m");
+            Console.WriteLine($"тест{Numberbuild}");
             Console.ReadKey();
             Console.Clear();
         }
@@ -92,6 +92,12 @@ namespace ConsoleApp1
         private void ApartmentsFloor()
         {
             Console.WriteLine($"Количество квартир на этаже: {(apartments / porch) / floor}");
+        }
+
+        private void GenerateNumb(int number)
+        {
+            numberbuild = number;
+            Numberbuild = ++number;
         }
     }
 }
