@@ -39,7 +39,6 @@ namespace ConsoleApp1
         public void ReadBuild()
         {
             Console.WriteLine($"Здание с адресом: {numberbuild}\nЭтажность: {floor}\nПодьездов: {porch}\nКоличество квартир:{apartments}\nВысота здания: {heightbuild}m");
-            Console.WriteLine($"тест{Numberbuild}");
             Console.ReadKey();
             Console.Clear();
         }
