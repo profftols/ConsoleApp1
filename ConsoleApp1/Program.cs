@@ -55,9 +55,10 @@ namespace ConsoleApp1
 
             Console.WriteLine("J = {0} K = {1}", o3.K, o3.J);
 
-            Console.WriteLine(o1.Calc("1", 76, 2));
+            Console.WriteLine(o1.Calc("*", 7, 2));
 
-            o1.Motrh(2.5);
+
+            Console.WriteLine(o1.ToString());
         }
     }
 }

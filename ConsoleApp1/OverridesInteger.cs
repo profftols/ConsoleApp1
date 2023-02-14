@@ -8,7 +8,7 @@ namespace ConsoleApp1
     {
         private int j;
         private int k;
-
+        private double i = 5.2;
         public int J
         {
             get { return j; }
@@ -86,7 +86,7 @@ namespace ConsoleApp1
 
             else return q % w;
         }
-        public float calc(string x, float q, float w)
+        public float Calc(string x, float q, float w)
         {
             if (x == "*") return q * w;
 
@@ -94,11 +94,10 @@ namespace ConsoleApp1
 
             else return q % w;
         }
-        public void Motrh(double f)
+
+        public override string ToString()
         {
-            f.ToString();
-            f += 5;
-            Console.WriteLine(f);
+            return $"{i}";
         }
     }
 }
