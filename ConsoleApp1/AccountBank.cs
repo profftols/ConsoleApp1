@@ -19,7 +19,7 @@ namespace ConsoleApp1
         static private long numberCheck;
         public long NumberCheck
         {
-            get; 
+            get;
             private set;
         }
         private long BalanceD;
@@ -58,15 +58,57 @@ namespace ConsoleApp1
             }
         }
 
-        public string RetString (string text)
+        public string RetString(string text)
         {
             char[] chars = text.ToCharArray();
             text = null;
-            for (int i = chars.Length - 1; i >= 0 ; i--)
+            for (int i = chars.Length - 1; i >= 0; i--)
             {
                 text += $"{chars[i]}";
             }
             return text;
         }
+
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj as AccountBank);
+        }
+         
+        public bool Equals(AccountBank other)
+        {
+            return other != null &&
+                    BalanceC == other.BalanceC &&
+                    BalanceD == other.BalanceD;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
+        /*
+        public static bool operator ==(AccountBank a, AccountBank b)
+        {
+            return (a.BalanceC == b.BalanceC && a.BalanceD == b.BalanceD);
+        }
+
+        public static bool operator !=(AccountBank a, AccountBank b)
+        {
+            return (a.BalanceD != b.BalanceD || a.BalanceC != b.BalanceC);
+        }
+
+        public bool Equals(AccountBank check)
+        {
+            if (BalanceD == check.BalanceD && BalanceC == check.BalanceC)
+                return true;
+            else
+                return false;
+        }
+        */
     }
 }
