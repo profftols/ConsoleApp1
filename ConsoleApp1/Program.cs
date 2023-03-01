@@ -10,8 +10,14 @@ namespace FileManagerTwo
 
             var code = new Acoder();
 
-            code.Encode(ask);
+            ask = code.Encode(ask);
 
+            Console.WriteLine(ask);
+
+            ask = code.Decode(ask);
+
+            Console.WriteLine(ask);
+            
         }
     }
 }

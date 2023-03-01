@@ -8,14 +8,14 @@ namespace FileManagerTwo
     {
         public string alf = "АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЬЪЭЮЯ";
 
-        public void Encode(string encode)
+        public string Encode(string encode)
         {
-
+            return encode;
         }
 
-        public void Decode(string decode)
+        public string Decode(string decode)
         {
-            
+            return decode;
         }
     }
 }

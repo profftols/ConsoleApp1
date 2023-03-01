@@ -7,10 +7,10 @@ namespace FileManagerTwo
 {
     class Acoder : ICoder
     {
-        string coderUP = "АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЬЪЭЮЯ";
-        string coderDo = "абвгдежзиклмнопрстуфхцчшщьъэюя";
+        private string coderUP = "АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЬЪЭЮЯ";
+        private string coderDo = "абвгдежзиклмнопрстуфхцчшщьъэюя";
 
-        public void Encode(string encode)
+        public string Encode(string encode)
         {
             char[] ch = new char[encode.Length];
             int length = coderUP.Length;
@@ -19,20 +19,21 @@ namespace FileManagerTwo
             for (int i = 0; i < ch.Length; i++)
             {
 
-                for (int j  = 0; j < coderUP.Length; j++)
+                for (int j = 0; j < coderUP.Length; j++)
                 {
 
                     if (encode[i] == coderUP[j])
                         if (length - 1 == j)
-                            ch[i] = 'A';
+                            ch[i] = 'А';
                         else
                             ch[i] = coderUP[j + 1];
 
                     else if (encode[i] == coderDo[j])
                         if (length - 1 == j)
-                            ch[i] = 'a';
+                            ch[i] = 'а';
                         else
                             ch[i] = coderDo[j + 1];
+
                     else if (encode[i] == ' ')
                         ch[i] = ' ';
 
@@ -41,12 +42,39 @@ namespace FileManagerTwo
 
             string result = new string(ch);
 
-            Console.WriteLine(result);
+            return result;
+
         }
 
-        public void Decode(string decode)
+        public string Decode(string decode)
         {
-            
+            char[] ch = new char[decode.Length];
+
+            for (int i = 0; i < ch.Length; i++)
+            {
+                for (int j = 0; j < coderUP.Length; j++)
+                {
+
+                    if (decode[i] == coderUP[j])
+                        if (0 == j)
+                            ch[i] = 'Я';
+                        else
+                            ch[i] = coderUP[j - 1];
+
+                    else if (decode[i] == coderDo[j])
+                        if (0 == j)
+                            ch[i] = 'я';
+                        else
+                            ch[i] = coderDo[j - 1];
+
+                    else if (decode[i] == ' ')
+                        ch[i] = ' ';
+                }
+            }
+
+            string result = new string(ch);
+
+            return result;
         }
     }
 }

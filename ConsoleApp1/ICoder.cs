@@ -8,7 +8,7 @@ namespace FileManagerTwo
     internal interface ICoder
     {
 
-        void Encode(string encode);
-        void Decode(string decode);
+        string Encode(string encode);
+        string Decode(string decode);
     }
 }
